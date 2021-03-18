@@ -15,11 +15,11 @@ from . import api
 from apps.demo import Demo
 from apps.user.register import Register
 from apps.user.login import Login
-from apps.project.project import ProjectModel
+from apps.project.project import Project
 
 apis = Api(api)
 
 apis.add_resource(Demo,"/demo")
 apis.add_resource(Register,"/user/register")
 apis.add_resource(Login,"/user/login")
-apis.add_resource(ProjectModel,"/project/add")
+apis.add_resource(Project,"/project/add")
