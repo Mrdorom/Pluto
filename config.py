@@ -19,7 +19,7 @@ class DefaultConfig(object):
 
     MONGODB_SETTINGS = {
         'db': 'flask',
-        'host': '127.0.0.1',
+        'host': '47.111.152.147',
         'port': 27017,
         'connect': True,
         'username': 'admin',
