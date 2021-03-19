@@ -24,7 +24,7 @@ class User(mongo.Document):
     user_name = mongo.StringField(required=True,max_length=128,unique=True)
     password = mongo.StringField(required=True,max_length=128)
     source_password = mongo.StringField(max_length=128)
-    create_time = mongo.DateTimeField(default=datetime.utcnow().strftime("%Y-%m%d %H:%M:%S"))
+    create_time = mongo.StringField(required=True)
 
     def __repr__(self):
         return "User(username={0},email={1})".format(self.user_name,self.email)
@@ -37,8 +37,8 @@ class ProjectModel(mongo.Document):
     project_id = mongo.SequenceField(primary_key=True)
     project_name = mongo.StringField(required=True,unique=True,max_length=128)
     project_desc = mongo.StringField()
-    owner = mongo.StringField()
-    create_time = mongo.DateTimeField(default=datetime.utcnow().strftime("%Y-%m%d %H:%M:%S"))
+    owner = mongo.IntField()
+    create_time = mongo.StringField(required=True)
 
     def __repr__(self):
         return "Project(project_id={0},project_name={1})".format(self.project_id,self.project_name)
