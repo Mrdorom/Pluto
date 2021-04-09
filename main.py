@@ -12,8 +12,8 @@ __author__ = 'shili'
 
 from flask import Flask
 from config import DefaultConfig
-from apps.extend import mongo,jwt
-from apps import api
+from app.extend import mongo,jwt,ma
+from app import api
 
 
 def create_app():
@@ -21,6 +21,7 @@ def create_app():
     app.config.from_object(DefaultConfig)
     jwt.init_app(app)
     mongo.init_app(app)
+    ma.init_app(app)
     return app
 
 

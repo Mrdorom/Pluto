@@ -17,9 +17,19 @@ class DefaultConfig(object):
     SECRET_KEY = os.urandom(24)
     JWT_SECRET_KEY = 'super-secret'  # Change this!
 
+    # MONGODB_SETTINGS = {
+    #     'db': 'flask',
+    #     'host': '47.111.152.147',
+    #     'port': 27017,
+    #     'connect': True,
+    #     'username': 'admin',
+    #     'password': '123456',
+    #     'authentication_source': 'admin'
+    # }
+
     MONGODB_SETTINGS = {
         'db': 'flask',
-        'host': '47.111.152.147',
+        'host': '127.0.0.1',
         'port': 27017,
         'connect': True,
         'username': 'admin',

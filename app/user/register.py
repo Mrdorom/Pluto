@@ -15,7 +15,7 @@ from datetime import datetime
 from flask_restful import Resource,reqparse
 from werkzeug.security import generate_password_hash
 
-from apps.models import User
+from app.models import User
 from utils.format_response import format_response
 from utils.serialize_type_func import validate_email
 
